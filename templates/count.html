@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Your text contains {{ count }} words!</h2>
+
+<a href="{% url 'home' %}">Homepage</a>
+
+<h3>Your full text:</h3>
+<i>
+    {{ fulltext }}
+</i>
+
+<h3>Most popular words in text:</h3>
+<div>
+{% for word, countword in worddict %}
+    {{ word }} : {{ countword }}<br>
+
+{% endfor %}
+</div>
+</body>
+</html>
